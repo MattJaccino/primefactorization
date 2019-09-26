@@ -28,7 +28,12 @@ async function main(){
 		  console.log("Goodbye.");
 		  break;
 	  }
-	  print_factors(inp);
+	  if(inp<0){
+		  console.log("Please enter a positive number.\n");
+	  }
+	  else{
+		  print_factors(inp);
+	  }
 	  console.log("Enter \"exit\" to exit.\n");
   }
 }
