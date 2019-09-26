@@ -36,8 +36,8 @@ void print_array(int* arr){
 
 int main(){
   int n;
-  cout << "Enter a number between 2 and 2^31 to prime factorize:\n";
   do{
+	cout << "Enter a number between 2 and 2^31 to prime factorize:\n";
 	cin.clear();
 	cin >> n;		
 	if(cin.fail()){
