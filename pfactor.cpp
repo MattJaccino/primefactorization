@@ -34,9 +34,13 @@ void print_array(int* arr){
   return;
 }
 
-int main(){
-  int n;
-  do{
+int main(int argc, char** argv){
+  int n = 0;
+  if(argc > 1){
+	  n = atoi(argv[1]);
+  }
+
+  while(n > MAX_INT || n < 2){
 	cout << "Enter a number between 2 and 2^31 to prime factorize:\n";
 	cin.clear();
 	cin >> n;		
@@ -45,7 +49,7 @@ int main(){
 		cin.clear();
 		cin.ignore(std::numeric_limits<streamsize>::max(),'\n');
 	}
-  }while(n > MAX_INT || n < 2);
+  }
   cout << "The prime factors of " << n << " are:\n";
   print_array(factor(n));
   return 0;
