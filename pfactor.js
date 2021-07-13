@@ -3,7 +3,7 @@ const io = require('console-read-write');
 function factor(number){
   const factors = [];
   let i=2;
-  while(number>=2){ //&& i < Math.floor(number/2)){
+  while(number>=2 && i < Math.floor(number/2)){
     if(number % i === 0){
       factors.push(i);
       number /= i;
